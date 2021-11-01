@@ -3,8 +3,6 @@ from difflib import SequenceMatcher
 
 class ExtractDataFromCSV:
     def __init__(self, csvDataList:list()):
-        numele_studentului = ""
-        lista_dictionare_materii = []
         self.csvDataList = csvDataList #raw data csv sablon
         self.lista_dictionare_ani = list()
     
