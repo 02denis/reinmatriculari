@@ -6,6 +6,7 @@ class ExtractDataFromCSV:
         numele_studentului = ""
         lista_dictionare_materii = []
         self.csvDataList = csvDataList #raw data csv sablon
+        self.lista_dictionare_ani = list()
     
     def get_student_name(self):
         numele = []
@@ -68,9 +69,13 @@ class ExtractDataFromCSV:
                 else:
                     dct3[strr]=parts[len(parts)-2]
 
-        print("anul I: ",dct)
-        print("anul II: ",dct2)
-        print("anul III: ",dct3)
-
+        if dct:
+            self.lista_dictionare_ani.append(dct)
+        if dct2:
+            self.lista_dictionare_ani.append(dct2)
+        if dct3:
+            self.lista_dictionare_ani.append(dct3)
+        
+        return self.lista_dictionare_ani
     
 
